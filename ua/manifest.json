@@ -1,0 +1,17 @@
+{
+    "name": "navigator.userAgent",
+    "description": "Change navigator.userAgent to Windows on Chrome's download page.",
+    "version": "1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [{
+        "run_at": "document_start",
+        "all_frames":true,
+        "js": ["contentscript.js"],
+        "matches": [
+            "<all_urls>"
+        ]
+    }]
+}
